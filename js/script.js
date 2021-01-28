@@ -1,32 +1,73 @@
-var sum0ld = function(a, b) {
+var obj = {
+    showContext: function showContext() {
+        //this = obj
 
-    return a + b;
-};
+        setTimeout(() => {
+            this.log('after 1000ms');
+        }, 1000);
+    },
+            log: function log(value) {
 
-//Arrow Functions 
-var sum = (a, b) => {
+                console.log(value);
+            }
+    };
+    obj.showContext();
 
-    var x = 10;
-    if (a > b) {
 
-    }
-    return a + b;
-}
 
-//var sum = (a, b) => a + b;
-console.log(sum(5, 15));
+/* var obj = {
+        showContext: function showContext() {
+            this.log('teste');
 
-/*
-                            var log = function(value) {
+            setTimeout(
+                function() {
 
-                            console.log(value);
-                            };
+                        this.log('after 1000ms');
+                    } .bind(this), //foca nisso pra resolver problemas
+                     1000
+                     );
+                },
+                log: function log(value) {
 
-                            log('test');
-                            */
+                    console.log(value);
+                }
+        };
+        obj.showContext(); */
 
-/* var meunumero = 20;
-                           var meutexto = ' exemplo';
 
-                           console.log(meunumero + meutexto);
-                           */
+
+        /* var sum0ld = function(a, b) {
+
+                                                    return a + b;
+                                                    };
+                                                    */
+
+        //Arrow Functions 
+        /*
+        var sum = (a, b) => {
+
+        var x = 10;
+        if (a > b) {
+
+        }
+        return a + b;
+        }
+        */
+
+        //var sum = (a, b) => a + b;
+        //console.log(sum(5, 15));
+
+        /*
+                                    var log = function(value) {
+
+                                    console.log(value);
+                                    };
+
+                                    log('test');
+                                    */
+
+        /* var meunumero = 20;
+                                   var meutexto = ' exemplo';
+
+                                   console.log(meunumero + meutexto);
+                                   */
